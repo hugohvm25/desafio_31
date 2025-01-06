@@ -124,6 +124,15 @@ console.log(txt.slice(0, 2))
 console.log(txt.slice(3, 6))
 console.log(txt.slice(7, 17))
 
+// com SPLIT - para cada espaço em branco retona um tipo de fracionamento da string
+console.log(txt.split('')) // ['E', 'u', ' ', 'a', 'm', 'o', ' ', 'J', 'a', 'v', 'a', 'S', 'c', 'r', 'i', 'p', 't']
+console.log(txt.split(' ')) // [ 'Eu', 'amo', 'JavaScript' ]
+console.log(txt.split('  ')) // [ 'Eu amo JavaScript' ]
+console.log(txt.split(' ', 2)) // [ 'Eu', 'amo' ]
+console.log(txt.split(' ').reverse(' ')) // [ 'JavaScript', 'amo', 'Eu' ]
+
+
+
 // 6. Valide se um URL começa com `https://` e termina com `.com`.
 
 let endereco = "http://www.meusite.com.br"
@@ -137,3 +146,5 @@ if (endereco.includes("http://" && ".com")) {
 } else {
     console.log("O endereço não possui somente htt:// e .com")
 }
+
+
