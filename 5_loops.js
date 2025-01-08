@@ -127,22 +127,65 @@ Escolha o loop certo:
 
 // 1. Use um loop `for` para imprimir os números de 1 a 10 no console.
 
+//para indice iniciando em zero, imprima os numeros somando uma unidade sequencialmente para os valores que sejam menores que 10 exclusive (incrementando)
+for (let indice = 0; indice < 10; indice++ ) {
+  console.log("Número", indice);
+  console.log(`Número: ${indice}`); // outra forma de concatenar
+}
 
 
 
 // 2. Crie uma lista de nomes e use um `for` para exibir cada nome.
 
+let nomes = ["Pedro", "Maria", "Jorge", "Ana"];
 
+//para indice iniciando em 0 e o indice seja menor que a quantidade de nomes na lista, imprima os nomes da lista
+for (let i = 0; i < nomes.length; i++) {
+  console.log(nomes[i]);
+}
 
 
 // 3. Escreva um código que verifica se um número em um array é maior que 10. Pare de verificar assim que encontrar o primeiro.
 
+let num = ["1","2","3","4","5","6","7","8","9","10","11","12","13","14",]
+// para um indice começando em 0 e o indice seja menor que a quantidade de numeros, imprima os valores -SE- o indice for maior ou igual a 10 interroma a verificão
+for (let i = 0; i < num.length ; i++) {
+  if (i >= 10) { 
+    break;
+  }
+  console.log(i)
+}
 
 
 
 // 4. Use um `while` para simular um contador de 10 a 0 e exiba "Lançamento!" quando atingir 0.
 
+let contagem = 10;
+
+// enquanto o contador for menor ou igual a 10, realize a contagem regressiva. SE a contagem for igual a 0 pare e imprima Lançamento. 
+while (contagem <= 10) {
+  if (contagem == 0) {
+    console.log("Lançamento!")
+    break;
+  }
+  console.log("Contando:", contagem);
+  contagem--;  
+}
 
 
 
 // 5. Escreva um loop que calcula o fatorial de um número (ex: `5! = 5*4*3*2*1`).
+
+let mult = 5*4*3*2*1
+console.log("Resultado de 5*4*3*2*1:", mult)
+
+
+let fatorial = 5;
+let resultado = 1; //menor resultado possível que é o !1 = 1.
+
+// para o indice igual ao valor desejado E desde que seja maior ou igual a 1, multiplique o valor atual pelo valor decrementando 1 unidade até 1 (que é a condição).
+for (let i = fatorial; i >= 1; i-- ) {
+  resultado *= i;
+}
+console.log("Fatorial de", fatorial,"é: ", resultado)
+
