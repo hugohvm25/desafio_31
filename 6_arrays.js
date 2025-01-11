@@ -76,6 +76,7 @@ cores.push("verde")
 console.log(cores)
 
 
+
 // 2. Use um loop para exibir todos os itens de um array de compras.
 
 let compras = ["caneta", "lapis", "caderno", "borracha"];
@@ -85,11 +86,14 @@ for (let i = 0; i <= compras.length; i++) {
 }
 
 
+
 // 3. Dado um array de números `[10, 20, 30, 40, 50]`, use o método `slice` para extrair os dois últimos números.
 
 let num = [10, 20, 30, 40, 50];
 
 console.log(num.slice(0, 3))
+
+
 
 // 4. Crie um array de tarefas e remova a primeira tarefa usando `shift`.
 
@@ -101,6 +105,7 @@ tarefas.shift()
 console.log(tarefas)
 
 
+
 // 5. Use `splice` para substituir o terceiro item de um array por "Substituído".
 
 let troca = ["um", "dois", "tres", "quatro", "cinco"];
@@ -109,6 +114,7 @@ console.log(troca)
 // var.splice(posição, quantidade, "dado que irá substituir")
 troca.splice(2, 1, "subistituido");
 console.log(troca)
+
 
   
  // 6. Transforme um array de palavras em uma frase completa usando `join`.
