@@ -187,7 +187,7 @@ console.log(somaLista(lista));
 
 function quantidadeCaracteres(palavra) {
        return palavra.length       
-}
+};
 
-let palavra = "Zmax"
-console.log(quantidadeCaracteres(palavra))
+let palavra = "Zmax";
+console.log(quantidadeCaracteres(palavra));
