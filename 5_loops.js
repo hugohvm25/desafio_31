@@ -181,7 +181,7 @@ console.log("Resultado de 5*4*3*2*1:", mult)
 
 
 let fatorial = 5;
-let resultado = 1; //menor resultado possível que é o !1 = 1.
+let resultado = 1; 
 
 // para o indice igual ao valor desejado E desde que seja maior ou igual a 1, multiplique o valor atual pelo valor decrementando 1 unidade até 1 (que é a condição).
 for (let i = fatorial; i >= 1; i-- ) {
