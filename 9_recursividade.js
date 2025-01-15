@@ -136,6 +136,22 @@ console.log(`O fatorial de ${num1} é ${fatorial(num1)}`);
 // 3. Crie uma função que some todos os números de um array usando recursão.
 
 
+function somaArray(lista) {
+    //para uma lista com tamanho 0, retorna o valor 0 pra soma
+    if (lista.length === 0) {
+        return 0;
+    }
+    // se não atendeu a condição acima, retorna soma dos valores utilzando o metodo slice para criar as listas separadas e somar cada uma delas: lista[0] + lista[1] + [...] + lista[n]
+    // metodo => slice()   | Retorna parte do array  
+    return lista[0] + somaArray(lista.slice(1));
+}
+
+let lista = [ 1 , 2 , 3];
+
+console.log(lista);
+console.log(lista[0]);
+console.log(`A soma dos valores da lista é: ${somaArray(lista)}`);
+
 
 
 // 4. Escreva uma função para verificar se uma palavra é um palíndromo usando recursão.

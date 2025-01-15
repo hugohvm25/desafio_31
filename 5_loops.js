@@ -147,7 +147,7 @@ for (let i = 0; i < nomes.length; i++) {
 
 // 3. Escreva um código que verifica se um número em um array é maior que 10. Pare de verificar assim que encontrar o primeiro.
 
-let num = ["1","2","3","4","5","6","7","8","9","10","11","12","13","14"]
+let num = [ 1 , 2 , 3 , 4 , 5 , 6 , 7 , 8 , 9 , 10 , 11 , 12 , 13 , 14 ] 
 // para um indice começando em 0 e o indice seja menor que a quantidade de numeros, imprima os valores -SE- o indice for maior ou igual a 10 interroma a verificão
 for (let i = 0; i < num.length ; i++) {
   if (i >= 10) { 
