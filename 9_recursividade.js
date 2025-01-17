@@ -156,12 +156,72 @@ console.log(`A soma dos valores da lista é: ${somaArray(lista)}`);
 
 // 4. Escreva uma função para verificar se uma palavra é um palíndromo usando recursão.
 
+// let palavra = "socorram-me subi no ônibus em Marrocos";
+let palavra = "madeira";
+
+// if (novaPalavra != palavra.split('').reverse().join()) {
+//     console.log(novaPalavra);
+// }
+
+// if (palavra === "") { 
+//     return "" // Caso base
+// }; 
+// console.log(palavra.split('').reverse().join());
+
+function palindromo(palavra) {
+    // caso base (ponto de parada) - se a palavra for uma string vazia, retorna vazio.
+    if (palavra === "") { 
+        return "" 
+    }; 
+    // se não for vazio, retorna pega a primeira letra contando a partir do 2 caractere com o slice(1), e envia a letra para o final 
+    // repete o processo para a letra seguinte devido à recursividade até que acabe a palavra
+    return palindromo(palavra.slice(1)) + palavra[0]; // Chamada recursiva
+  }
+  console.log(palavra.slice(1));
+  console.log(palavra[0]);
+  console.log(palindromo(palavra)); 
+
+// Primeira chamada:
+// Entrada: "casa"
+// Retorna: inverterString("asa") + "c"
+
+// Segunda chamada:
+// Entrada: "asa"
+// Retorna: inverterString("sa") + "a"
+
+// Terceira chamada:
+// Entrada: "sa"
+// Retorna: inverterString("a") + "s"
+
+// Quarta chamada:
+// Entrada: "a"
+// Retorna: inverterString("") + "a"
+
+// Quinta chamada (caso base):
+// Entrada: ""
+// Retorna: ""
 
 
 
 // 5. Implemente uma função que calcule o n-ésimo termo da sequência de Fibonacci.
 
+let numFib = 6
 
+function fibonacci(numFib) {
+    // para um numero menor ou igual a 1 retorna o mesmo valor
+    if (numFib <= 1) {
+        return numFib 
+    };
+
+    // pega o primeiro numero diminui uma unidade e soma com o mesmo numero menos 2 unidades
+    // para 2 => 2-1=1 + 2-2= 0 => 1+0=1 
+    return fibonacci(numFib - 1) + fibonacci(numFib - 2);  
+};
+
+
+console.log(fibonacci(numFib)); // Saída: 8 (0, 1, 1, 2, 3, 5, 8)
+
+//  (0, 1, 1, 2, 3, 5, 8)
 
 
 // 6. Crie uma função que liste todos os arquivos de um diretório usando recursão.

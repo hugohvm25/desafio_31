@@ -92,6 +92,8 @@ let nomeCompleto2 = "Segundo Nome"
 let nomeCortado = nomeCompleto2.slice(0, 7)
 console.log(nomeCortado)
 
+
+
 // 2. Verifique se uma string contém a palavra "Java" e exiba uma mensagem personalizada.
 
 let palavra = "Python Golang"
@@ -102,6 +104,8 @@ if (palavra.includes("Java")) {
     console.log("Não possui Java nessas palavras.")
 }
 
+
+
 // 3. Converta uma frase para letras maiúsculas e remova os espaços em branco nas extremidades.
 
 let frase = "   Meu nome é Zmax   "
@@ -109,12 +113,16 @@ let frase = "   Meu nome é Zmax   "
 console.log(frase)
 console.log(frase.trim().toUpperCase());
 
+
+
 // 4. Substitua a palavra "erro" por "correção" na string `"Houve um erro no sistema."`.
 
 let texto = "Houve um erro no sistema"
 
 console.log(texto)
 console.log(texto.replace("erro", "correção"))
+
+
 
 // 5. Divida a frase `"Eu amo JavaScript"` em palavras separadas e exiba cada uma.
 
