@@ -213,15 +213,28 @@ function fibonacci(numFib) {
         return numFib 
     };
 
-    // pega o primeiro numero diminui uma unidade e soma com o mesmo numero menos 2 unidades
-    // para 2 => 2-1=1 + 2-2= 0 => 1+0=1 
     return fibonacci(numFib - 1) + fibonacci(numFib - 2);  
 };
 
 
-console.log(fibonacci(numFib)); // Saída: 8 (0, 1, 1, 2, 3, 5, 8)
-
-//  (0, 1, 1, 2, 3, 5, 8)
+console.log(fibonacci(numFib)); // Saída: 8 (1, 1, 2, 3, 5, 8)
 
 
 // 6. Crie uma função que liste todos os arquivos de um diretório usando recursão.
+
+let arquivos = ["pasta1", "pasta2", ["arq1.exe", "arq2.exe"], ["pasta3", "arq4.exe"]];
+
+function listarDiretorio(diretorio) {
+    // para um arquivo dentro de um diretorio
+    for (let arquivo of diretorio) {
+        // se a variavel arquivo for um array entra na recursão
+        if (Array.isArray(arquivo)) {
+            listarDiretorio(arquivo);
+        } else {
+            // exibe os arquivos do diretório
+            console.log(arquivo);
+        }
+    }
+}
+
+listarDiretorio(arquivos);
