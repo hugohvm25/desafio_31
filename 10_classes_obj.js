@@ -48,12 +48,35 @@ pessoa1.apresentar(); // Saída: Olá, meu nome é João e tenho 25 anos.
 
 // 1. Crie uma classe chamada `Livro` com atributos `titulo`, `autor` e `ano`. Adicione um método para exibir os detalhes do livro.
 
+class Livro {
+  constructor(titulo, autor, ano) {
+    this.titulo = titulo;
+    this.autor = autor;
+    this.ano = ano;
+  }
+
+  detalhes(){
+    console.log(`Este é o livro ${this.titulo} que foi escrito por ${this.autor} no ano ${this.ano}`)
+  }
+}
+
+const autor1 = new Livro("Primeiro Livro", "Autor 1", 2020);
+const autor2 = new Livro("Segundo Livro", "Autor 2", 2021);
+const autor3 = new Livro("Terceiro Livro", "Autor 3", 2022);
+
+autor1.detalhes()
+autor2.detalhes()
+autor3.detalhes()
 
 
 
 // 2. Implemente uma classe `ContaBancaria` com os métodos `depositar` e `sacar`.
 
-
+class ContaBancaria {
+  constructor(parameters) {
+    
+  }
+}
 
 
 // 3. Crie uma classe `Pessoa` com um método que exibe "Bem-vindo, [nome]!".
