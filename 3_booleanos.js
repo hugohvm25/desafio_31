@@ -55,7 +55,7 @@ Cuidado com conversões automáticas (truthy e falsy):
 No JavaScript, alguns valores são interpretados como true ou false, mesmo que não sejam booleanos.
 ____________________________________________
 Valor                        | Interpretação  
-0, "", null, undefined, NaN  |      false
+0, "", null, undefined, NaN  |     false
 Qualquer outro valor         |     true
 ____________________________________________
 
