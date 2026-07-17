@@ -87,56 +87,106 @@ O funcionamento interno do motor está "escondido". O usuário só interage com 
 
 // 1. Crie uma classe `ContaBancaria` que tenha saldo privado e métodos para depositar, sacar e consultar o saldo.
 
-class ContaBancaria {
-    #saldo // usando # para proteção do parâmetro
+// class ContaBancaria {
+//     #saldo // usando # para proteção do parâmetro
 
-    constructor(saldoConta) {      
-        this.#saldo = saldoConta;
-    }
+//     constructor(saldoConta) {      
+//         this.#saldo = saldoConta;
+//     }
 
-    consultarSaldo() {
-        return this.#saldo;
-    }
+//     consultarSaldo() {
+//         return this.#saldo;
+//     }
 
-    depositar(valor) {
-        return this.#saldo += valor;
-    }
+//     depositar(valor) {
+//         return this.#saldo += valor;
+//     }
 
-    sacar(valor) {
-        return this.#saldo -= valor;
-    }
-}
+//     sacar(valor) {
+//         return this.#saldo -= valor;
+//     }
+// }
 
-const minhaConta = new ContaBancaria(300);
-minhaConta.consultarSaldo();
-console.log(`O saldo da minha conta é ${minhaConta.consultarSaldo()}`)
+// const minhaConta = new ContaBancaria(300);
+// minhaConta.consultarSaldo();
+// console.log(`O saldo da minha conta é ${minhaConta.consultarSaldo()}`)
 
-minhaConta.depositar(200);
-console.log(`O saldo da minha conta é ${minhaConta.consultarSaldo()}`)
+// minhaConta.depositar(200);
+// console.log(`O saldo da minha conta é ${minhaConta.consultarSaldo()}`)
 
-minhaConta.sacar(400);
-console.log(`O saldo da minha conta é ${minhaConta.consultarSaldo()}`)
+// minhaConta.sacar(400);
+// console.log(`O saldo da minha conta é ${minhaConta.consultarSaldo()}`)
 
-console.log(""); // pular linha
+// console.log(""); // pular linha
+
+
 
 
 // 2. Implemente uma classe `Usuario` que armazena uma senha privada e permite alterar a senha com validação.
 
+// class Usuario {
+//   #senha
+
+//   constructor(senhaInicial) {
+//     this.#senha = senhaInicial;    
+//   }
+
+//   alterarSenha(senhaAtual, novaSenha) {
+//     if (senhaAtual === this.#senha) {
+//       this.#senha = novaSenha;
+//       return 'Senha alterada';
+//     } else {
+//       return 'senha não alterada';
+//     }
+
+//   }
+
+//   verificarSenha(senha) {
+//     if (this.#senha === senha) {
+//       return 'senha validada';
+//     } else {
+//       return 'senha incorreta'
+//     }  
+//   }
+// }
+
+// const usuario = new Usuario('1111');
+
+// console.log(usuario.verificarSenha('1111'))
+
+// console.log(usuario.alterarSenha('2222', '1234'))
+// console.log(usuario.verificarSenha('2222'));
+
+// console.log(usuario.alterarSenha('1111', '1234'))
+// console.log(usuario.verificarSenha('1234'));
 
 
-console.log(""); // pular linha
+
+
+
+// console.log(""); // pular linha
+
+
 
 // 3. Crie uma classe `ControleRemoto` com métodos para ligar e desligar a TV, escondendo o estado interno.
 
 
 
-console.log(""); // pular linha
+// console.log(""); // pular linha
+
+
+
+
 
 // 4. Escreva uma classe `Cofre` que armazena valores privados e só permite acesso com uma senha correta.
 
 
 
 console.log(""); // pular linha
+
+
+
+
 
 // 5. Implemente um sistema de carrinho de compras com itens privados e métodos para adicionar, remover e listar os itens.
 

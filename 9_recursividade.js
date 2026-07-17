@@ -103,6 +103,7 @@ console.log(fibonacci(6)); // Saída: 8 (0, 1, 1, 2, 3, 5, 8)
 
 
 
+
 // 1. Escreva uma função recursiva que conte de `n` até 0.
 
 function ateZero(num) {
@@ -119,6 +120,8 @@ function ateZero(num) {
 ateZero(4);
 
 
+
+
 // 2. Implemente uma função que calcule o fatorial de um número.
 
 let num1 = 5
@@ -131,6 +134,8 @@ function fatorial(num1) {
 }
 
 console.log(`O fatorial de ${num1} é ${fatorial(num1)}`);
+
+
 
 
 // 3. Crie uma função que some todos os números de um array usando recursão.
@@ -151,6 +156,7 @@ let lista = [ 1 , 2 , 3];
 console.log(lista);
 console.log(lista[0]);
 console.log(`A soma dos valores da lista é: ${somaArray(lista)}`);
+
 
 
 
@@ -203,6 +209,8 @@ function palindromo(palavra) {
 
 
 
+
+
 // 5. Implemente uma função que calcule o n-ésimo termo da sequência de Fibonacci.
 
 let numFib = 6
@@ -218,6 +226,8 @@ function fibonacci(numFib) {
 
 
 console.log(fibonacci(numFib)); // Saída: 8 (1, 1, 2, 3, 5, 8)
+
+
 
 
 // 6. Crie uma função que liste todos os arquivos de um diretório usando recursão.
