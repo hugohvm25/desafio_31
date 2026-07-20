@@ -162,8 +162,6 @@ O funcionamento interno do motor está "escondido". O usuário só interage com 
 
 
 
-
-
 // console.log(""); // pular linha
 
 
@@ -171,18 +169,116 @@ O funcionamento interno do motor está "escondido". O usuário só interage com 
 // 3. Crie uma classe `ControleRemoto` com métodos para ligar e desligar a TV, escondendo o estado interno.
 
 
+// class ControleRemoto {
+
+//   ligarTV() {
+//     console.log('ligando tv')
+//   }
+
+//   desligarTV() {
+//     console.log('desligando tv')
+//   }
+// }
+
+
+// const novoControle = new ControleRemoto();
+// novoControle.ligarTV();
+// novoControle.desligarTV();
 
 // console.log(""); // pular linha
 
 
 
 
-
 // 4. Escreva uma classe `Cofre` que armazena valores privados e só permite acesso com uma senha correta.
 
+// class Cofre {
+//   #senha
+//   #saldo
+
+//   constructor(senhaInicial, saldoConta) {
+//     this.#senha = senhaInicial;
+//     this.#saldo = saldoConta;
+//   }
+
+//   validadarSenha(senha) {
+//     if (this.#senha === senha) {
+//       console.log('Senha correta.\n')
+//     } else {
+//       console.log('Senha errada.\n')
+//     }
+//   }
+
+//   alterarSenha(senhaAtual, novaSenha) {
+//     if (senhaAtual === this.#senha) {
+//       this.#senha = novaSenha;
+//       console.log('Senha alterada com sucesso.\n');
+//     } else {
+//       console.log('A senha não pode ser alterada.\n');
+//     }
+//   }
+
+//   consultarSaldo(senha) {
+//     if (this.#senha === senha) {
+//       console.log(`O saldo atual é R$${this.#saldo}.\n`);
+//     } else {
+//       console.log('O saldo não pode ser exibido porque a senha está incorreta.\n');
+//     }
+//   }
 
 
-console.log(""); // pular linha
+//   depositar(senha, valor) {
+//     if (this.#senha != senha) {
+//       console.log('O valor não pode ser depositado porque a senha está incorreta.\n');
+//     } else {
+//       if (this.#senha === senha && valor <= 0) {
+//         console.log('O valor não pode ser depositado porque o valor é negativo.\n');       
+//       } else {
+//         this.#saldo += valor;
+//         console.log(`Foi depositado o valor de R$${valor} e saldo atual é R$${this.#saldo}.\n`);
+//       }
+//     }
+//   }
+
+
+//   sacar(senha, valor) {
+//     if (this.#senha != senha) {
+//     console.log('O valor não pode ser sacado porque a senha está incorreta.\n');
+//     } else {
+//       if (this.#senha === senha && valor > this.#saldo) {
+//         console.log('O valor não pode ser sacado.\n');       
+//       } else {
+//         this.#saldo -= valor;
+//         console.log(`Foi sacado o valor de R$${valor} e saldo atual é R$${this.#saldo}.\n`);
+//       }
+//     }
+//   }
+
+// }
+
+
+
+// const cofre = new Cofre('111', 100)
+
+// cofre.validadarSenha('111')
+
+// cofre.consultarSaldo('111')
+// cofre.consultarSaldo('112')
+
+// cofre.depositar('111', 50)
+// cofre.depositar('111', -50)
+
+// cofre.alterarSenha('111', '123')
+// cofre.validadarSenha('123')
+
+// cofre.consultarSaldo('123')
+
+// cofre.sacar('111', 50)
+// cofre.sacar('123', 50)
+
+
+
+// console.log(""); // pular linha
 
 
 
