@@ -286,5 +286,33 @@ O funcionamento interno do motor está "escondido". O usuário só interage com 
 
 // 5. Implemente um sistema de carrinho de compras com itens privados e métodos para adicionar, remover e listar os itens.
 
+class Carrinho {
+  #itens
+  
+  // o carrinho deve começar vazio, não precisa de parametros iniciais no construtor
+  constructor() {
+    this.#itens = [];
+  }
 
+  adicionar (item) {
+    this.#itens.push(item);
+    console.log(`O item ${item} foi adicionado ao carrinho. Carrinho: ${this.#itens}.\n`)
+  }
 
+  remover (item) {
+    this.#itens = this.#itens.filter(valor => valor !== item);
+    console.log(`O ${item} foi removido do carrinho. Carrinho: ${this.#itens}.\n`)
+  }
+
+  listar() {
+    console.log(`Carrinho: ${this.#itens.join(", ")}`);
+  }
+
+}
+
+const carrinho = new Carrinho();
+
+carrinho.adicionar('caneta');
+carrinho.adicionar('livro');
+carrinho.remover('livro');
+carrinho.listar();
