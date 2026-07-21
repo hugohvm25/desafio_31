@@ -116,60 +116,60 @@ meuGato.fazerSom(); // Saída: Miau! 🐱
 
 // 1. Crie uma classe `Veiculo` e duas subclasses: `Carro` e `Moto`. Adicione métodos específicos para cada subclasse.
 
-class Veiculo {
+// class Veiculo {
 
-    constructor(marca, tipo) {
-        this.marca = marca;
-        this.tipo = tipo;
-    };
+//     constructor(marca, tipo) {
+//         this.marca = marca;
+//         this.tipo = tipo;
+//     };
 
-    exibir() {
-        console.log(`${this.marca} - ${this.tipo}\n`);
-    };
+//     exibir() {
+//         console.log(`${this.marca} - ${this.tipo}\n`);
+//     };
 
-};
+// };
 
 
-class Carro extends Veiculo {
+// class Carro extends Veiculo {
 
-    constructor(marca, nome, tipo) {
-        super(marca, tipo);
-        this.nome = nome;        
-    };
+//     constructor(marca, nome, tipo) {
+//         super(marca, tipo);
+//         this.nome = nome;        
+//     };
 
-    exibirTipo() {
-        console.log(`${this.tipo} - ${this.nome}\n`)
-    }
+//     exibirTipo() {
+//         console.log(`${this.tipo} - ${this.nome}\n`)
+//     }
     
-}
+// }
 
-class Moto extends Veiculo {
+// class Moto extends Veiculo {
 
-    constructor(marca, nome, tipo) {
-        super(marca, tipo);
-        this.nome = nome;        
-    };
+//     constructor(marca, nome, tipo) {
+//         super(marca, tipo);
+//         this.nome = nome;        
+//     };
 
-    exibirTipo() {
-        console.log(`${this.tipo} - ${this.nome}\n`)
-    }
-}
+//     exibirTipo() {
+//         console.log(`${this.tipo} - ${this.nome}\n`)
+//     }
+// }
 
-const carro1 = new Carro('Renaut', 'Sandero', 'Passeio');
-carro1.exibir();
-carro1.exibirTipo();
+// const carro1 = new Carro('Renaut', 'Sandero', 'Passeio');
+// carro1.exibir();
+// carro1.exibirTipo();
 
-const carro2 = new Carro('Renaut', 'Boreal', 'SUV');
-carro2.exibir();
-carro2.exibirTipo();
+// const carro2 = new Carro('Renaut', 'Boreal', 'SUV');
+// carro2.exibir();
+// carro2.exibirTipo();
 
-const moto1 = new Moto('Honda', 'CG', 'urbano')
-moto1.exibir();
-moto1.exibirTipo();
+// const moto1 = new Moto('Honda', 'CG', 'urbano')
+// moto1.exibir();
+// moto1.exibirTipo();
 
-const moto2 = new Moto('Honda', 'R1', 'esportivo')
-moto2.exibir();
-moto2.exibirTipo();
+// const moto2 = new Moto('Honda', 'R1', 'esportivo')
+// moto2.exibir();
+// moto2.exibirTipo();
 
 
 
@@ -179,7 +179,37 @@ moto2.exibirTipo();
 
 
 
+class Funcionario {
 
+    constructor(nome, cargo) {
+        this.nome = nome;
+        this.cargo = cargo;
+    }
+
+    exibirFuncionario() {
+        console.log(`O funcionario é ${this.nome} e o cargo é ${this.cargo}.\n`)
+    }
+}
+
+class Gerente extends Funcionario{
+    constructor(nome, cargo, setor) {
+        super(nome, cargo);
+        this.setor = setor;
+    }
+
+    exibirFuncao() {
+        console.log(`O(a) ${this.nome} é ${this.cargo} do setor ${this.setor}.`)
+    }
+    
+}
+
+
+const func1 = new Funcionario('Hugo', 'Analista');
+func1.exibirFuncionario();
+
+const func2 = new Gerente('Pedro', 'Gerente', 'EAD');
+func2.exibirFuncionario();
+func2.exibirFuncao();
 
 
 
