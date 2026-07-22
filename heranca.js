@@ -217,48 +217,45 @@ meuGato.fazerSom(); // Saída: Miau! 🐱
 // 3. Crie uma superclasse `Forma` com um método para calcular área, e subclasses como `Quadrado` e `Círculo` que sobrescrevam esse método.
 
 
-class Forma {
+// class Forma {
 
-    calcularArea() {
-        throw new Error("Cada forma deve implementar calcularArea().");
-    };
+//     calcularArea() {
+//         throw new Error("Cada forma deve implementar calcularArea().");
+//     };
 
-}
+// }
 
-class Circulo extends Forma {
+// class Circulo extends Forma {
 
-    constructor(raio) {
-        super();
-        this.raio = raio;
-    };
+//     constructor(raio) {
+//         super();
+//         this.raio = raio;
+//     };
 
-    calcularArea() {
-        return Math.PI * this.raio **2;
-    };
-};
+//     calcularArea() {
+//         return Math.PI * this.raio **2;
+//     };
+// };
 
-class Retangulo extends Forma{
+// class Retangulo extends Forma{
 
-    constructor(lado1, lado2) {
-        super();
-        this.lado1 = lado1;
-        this.lado2 = lado2;
-    };
+//     constructor(lado1, lado2) {
+//         super();
+//         this.lado1 = lado1;
+//         this.lado2 = lado2;
+//     };
 
-    calcularArea() {
-        return this.lado1 * this.lado2;
-    };
-};
-
-
-const circulo1 = new Circulo(3);
-const retangulo1 = new Retangulo(2, 3);
-
-console.log(circulo1.calcularArea())
-console.log(retangulo1.calcularArea())
+//     calcularArea() {
+//         return this.lado1 * this.lado2;
+//     };
+// };
 
 
+// const circulo1 = new Circulo(3);
+// const retangulo1 = new Retangulo(2, 3);
 
+// console.log(circulo1.calcularArea())
+// console.log(retangulo1.calcularArea())
 
 
 
@@ -267,8 +264,29 @@ console.log(retangulo1.calcularArea())
 // 4. Escreva uma classe `Animal` e subclasses como `Cachorro` e `Gato`, cada uma com métodos específicos.
 
 
+class Animal {   
+}
+
+class Cachorro extends Animal {
+
+    latir(){
+        console.log("au au")
+    }
+}
 
 
+class Gato extends Animal {
+
+    miar() {
+        console.log("miauu")
+    }
+}
+
+const cachorro = new Cachorro();
+const gato = new Gato();
+
+cachorro.latir();
+gato.miar();
 
 
 
