@@ -179,42 +179,83 @@ meuGato.fazerSom(); // Saída: Miau! 🐱
 
 
 
-class Funcionario {
+// class Funcionario {
 
-    constructor(nome, cargo) {
-        this.nome = nome;
-        this.cargo = cargo;
-    }
+//     constructor(nome, cargo) {
+//         this.nome = nome;
+//         this.cargo = cargo;
+//     }
 
-    exibirFuncionario() {
-        console.log(`O funcionario é ${this.nome} e o cargo é ${this.cargo}.\n`)
-    }
-}
+//     exibirFuncionario() {
+//         console.log(`O funcionario é ${this.nome} e o cargo é ${this.cargo}.\n`)
+//     }
+// }
 
-class Gerente extends Funcionario{
-    constructor(nome, cargo, setor) {
-        super(nome, cargo);
-        this.setor = setor;
-    }
+// class Gerente extends Funcionario{
+//     constructor(nome, cargo, setor) {
+//         super(nome, cargo);
+//         this.setor = setor;
+//     }
 
-    exibirFuncao() {
-        console.log(`O(a) ${this.nome} é ${this.cargo} do setor ${this.setor}.`)
-    }
+//     exibirFuncao() {
+//         console.log(`O(a) ${this.nome} é ${this.cargo} do setor ${this.setor}.`)
+//     }
     
-}
+// }
 
 
-const func1 = new Funcionario('Hugo', 'Analista');
-func1.exibirFuncionario();
+// const func1 = new Funcionario('Hugo', 'Analista');
+// func1.exibirFuncionario();
 
-const func2 = new Gerente('Pedro', 'Gerente', 'EAD');
-func2.exibirFuncionario();
-func2.exibirFuncao();
+// const func2 = new Gerente('Pedro', 'Gerente', 'EAD');
+// func2.exibirFuncionario();
+// func2.exibirFuncao();
 
 
 
 
 // 3. Crie uma superclasse `Forma` com um método para calcular área, e subclasses como `Quadrado` e `Círculo` que sobrescrevam esse método.
+
+
+class Forma {
+
+    calcularArea() {
+        throw new Error("Cada forma deve implementar calcularArea().");
+    };
+
+}
+
+class Circulo extends Forma {
+
+    constructor(raio) {
+        super();
+        this.raio = raio;
+    };
+
+    calcularArea() {
+        return Math.PI * this.raio **2;
+    };
+};
+
+class Retangulo extends Forma{
+
+    constructor(lado1, lado2) {
+        super();
+        this.lado1 = lado1;
+        this.lado2 = lado2;
+    };
+
+    calcularArea() {
+        return this.lado1 * this.lado2;
+    };
+};
+
+
+const circulo1 = new Circulo(3);
+const retangulo1 = new Retangulo(2, 3);
+
+console.log(circulo1.calcularArea())
+console.log(retangulo1.calcularArea())
 
 
 
