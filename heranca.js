@@ -264,31 +264,97 @@ meuGato.fazerSom(); // Saída: Miau! 🐱
 // 4. Escreva uma classe `Animal` e subclasses como `Cachorro` e `Gato`, cada uma com métodos específicos.
 
 
-class Animal {   
-}
+// class Animal {   
+// }
 
-class Cachorro extends Animal {
+// class Cachorro extends Animal {
 
-    latir(){
-        console.log("au au")
-    }
-}
+//     latir(){
+//         console.log("au au")
+//     }
+// }
 
 
-class Gato extends Animal {
+// class Gato extends Animal {
 
-    miar() {
-        console.log("miauu")
-    }
-}
+//     miar() {
+//         console.log("miauu")
+//     }
+// }
 
-const cachorro = new Cachorro();
-const gato = new Gato();
+// const cachorro = new Cachorro();
+// const gato = new Gato();
 
-cachorro.latir();
-gato.miar();
+// cachorro.latir();
+// gato.miar();
+
+
 
 
 
 
 // 5. Crie uma classe `Conta` e uma subclasse `ContaPoupanca` que adicione juros ao saldo.
+
+
+class Conta {
+
+    constructor(saldo) {
+        this.saldo = saldo;
+    }
+}
+
+class ContaPoupanca extends Conta{
+
+    constructor(saldo) {
+        super(saldo);
+    };
+
+    exibirSaldo() {
+        return `O saldo atual é de R$${this.saldo}`;
+    };
+
+
+    depositar(valor) {
+        if (valor <= 0) {
+            return `O valor não pode ser depositado.`;            
+        } else {
+            this.saldo += valor
+            return `Foi depositado o valor de R$${valor} e o saldo atual é de R$${this.saldo}`;
+        };
+    };
+
+
+    sacar(valor) {
+        if (valor > this.saldo) {
+            return `O valor não pode ser sacado.`;
+        } else {
+            this.saldo -= valor;
+            return `Foi sacado o valor de R$${valor} e o saldo atual é de R$${this.saldo}`; 
+        };
+    };
+
+    rendimento(dia) {
+        if (this.saldo === 0) {
+            return `Não há rendimento`;
+        }
+
+        if (dia <= 0) {
+            return "A quantidade de dias deve ser maior que zero.";
+        }
+
+        const valorRendimento = this.saldo * 0.05 * dia;
+
+        this.saldo += valorRendimento;
+
+        return `O rendimento foi de R$${valorRendimento} e o saldo atual é de R$${this.saldo}.`;
+        
+    };
+};
+
+const conta = new ContaPoupanca(500);
+console.log(conta.exibirSaldo())
+console.log(conta.depositar(50));
+console.log(conta.sacar(100));
+console.log(conta.rendimento(10));
+
+
