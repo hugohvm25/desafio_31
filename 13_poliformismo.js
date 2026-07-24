@@ -77,32 +77,37 @@ O polimorfismo acontece quando uma subclasse **sobrescreve** um método da super
 
 // 1. Crie uma classe `Funcionario` com um método `calcularSalario`. Implemente subclasses como `Desenvolvedor` e `Gerente` que sobrescrevem esse método.
 
-class Funcionario {
 
-    calcularSalario() {
-        console.log('O salario será mostrado para cada função.');
-    };
-};
 
-class Desenvolvedor {
+// class Funcionario {
 
-    calcularSalario() {
-        console.log('O salario do desenvolvedor é 1000');
-    };
-};
+//     calcularSalario() {
+//         console.log('O salario será mostrado para cada função.');
+//     };
+// };
 
-class Gerente {
+// class Desenvolvedor extends Funcionario {
 
-    calcularSalario() {
-        console.log('O salario do gerente é 1100');
-    };
-};
+//     calcularSalario() {
+//         console.log('O salario do desenvolvedor é 1000');
+//     };
+// };
 
-const dev = new Desenvolvedor();
-const gerente = new Gerente();
+// class Gerente extends Funcionario {
 
-dev.calcularSalario();
-gerente.calcularSalario();
+//     calcularSalario() {
+//         console.log('O salario do gerente é 1100');
+//     };
+// };
+
+// const dev = new Desenvolvedor();
+// const gerente = new Gerente();
+
+// dev.calcularSalario();
+// gerente.calcularSalario();
+
+
+
 
 
 
@@ -110,9 +115,44 @@ gerente.calcularSalario();
 
 
 
+class Transporte {
+
+    mover() {
+        console.log('está se movendo.')
+    }
+}
 
 
+class Carro extends Transporte {
 
+    mover() {
+        console.log('o carro está acelerando.')
+    }
+}
+
+
+class Aviao extends Transporte {
+
+    mover() {
+        console.log('o aviao está voando.')
+    }
+}
+
+
+class Barco extends Transporte {
+
+    mover() {
+        console.log('o barco está navegando.')
+    }
+}
+
+const carro = new Carro();
+const aviao = new Aviao();
+const barco = new Barco();
+
+carro.mover()
+aviao.mover()
+barco.mover()
 
 
 // 3. Crie uma superclasse `Documento` com um método `exibirConteudo`, e subclasses como `PDF` e `Word` que personalizem esse método.
